@@ -1,0 +1,119 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1300,
+  "height": 700,
+  "projection": {
+    "type": "albers",
+    "scale": 1100,
+    "rotate": [-135, 3.5], 
+    "center": [0, -24.1339185], 
+    "parallels": [-43.0331597, -5.2346774]
+  },
+  "data": {
+    "url": "data/STE_2021_AUST_GDA2020.json",
+    "format": {
+      "type": "json"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "fill": "#d1d1d1",
+        "stroke": "white"
+      }
+    },
+    {
+      "data": {
+        "url": "data/Major_Australian_Cities_Weather_Data.csv",
+        "format": {
+          "type": "csv"
+        }
+      },
+      "transform": [
+        {
+          "aggregate": [{"op": "mean", "field": "Rainfall", "as": "AvgRainfall"}],
+          "groupby": ["Location", "Longitude", "Latitude"]
+        }
+      ],
+      "layer": [
+        {
+          "mark": "circle",
+          "encoding": {
+            "longitude": {"field": "Longitude", "type": "quantitative"},
+            "latitude": {"field": "Latitude", "type": "quantitative"},
+            "size": {
+              "field": "AvgRainfall",
+              "type": "quantitative",
+              "title": "Average Rainfall (mm)",
+              "scale": {
+                 "range": [100, 1000]  
+              },
+              "legend": {
+                  "orient": "right", 
+                  "titleFontSize": 12,
+                  "labelFontSize": 10,
+                  "symbolSize": 50,
+                  "padding": 20
+            }
+            },
+            "color": {
+              "field": "AvgRainfall",
+              "type": "quantitative",
+              "scale": {
+                  "scheme": "blues",
+                  "domain": [0,1,2,3,4,5]
+              },
+              "title": "Average Rainfall (mm)",
+              "legend": {
+                  "orient": "right",  
+                  "titleFontSize": 12,
+                  "labelFontSize": 10,
+                  "padding": 30
+                }
+            },
+            "tooltip": [
+              {"field": "Location", "type": "nominal", "title": "City"},  
+              {"field": "AvgRainfall", "type": "quantitative", "title": "Rainfall (mm)", "format": ".2f"}
+            ]
+          },
+
+          "selection": {
+            "tooltip": {
+              "type": "single",
+              "on": "mouseover",
+              "encodings": ["longitude", "latitude"],
+              "nearest": false
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": -10,  
+            "fontSize": 10,
+            "fontWeight": "bold",
+            "align": "right"
+          },
+          "encoding": {
+            "longitude": {"field": "Longitude", "type": "quantitative"},
+            "latitude": {"field": "Latitude", "type": "quantitative"},
+            "text": {"field": "Location", "type": "nominal"},
+            "color": {"value": "black"}  
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+          "graticule": true
+      },
+      "mark": {
+          "type": "geoshape",
+          "stroke": "#c3c3c3",  
+          "strokeWidth": 1,
+          "opacity": 1
+      }
+    }
+  ]
+}
