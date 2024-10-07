@@ -9,6 +9,18 @@ h1 {
     display: block;
     padding: 20px; 
 }
+
+h2 {
+    text-align: center;
+    font-family: 'Arial';
+    font-size: 25px;
+    margin-bottom: 60px;
+    font-weight: bold;
+    background-color: rgb(204, 255, 162);
+    width: 100%;
+    display: block;
+    padding: 20px; 
+}
 body {
     background-color: rgb(237, 255, 222);
 }
@@ -16,4 +28,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+select {
+    font-size:15px;
+    padding: 20px; 
+}
+
+p {
+    text-align: left;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
+.background-image-container {
+    margin-left: auto;
+}
+.background-image{
+    height: 280px;
+    width: 440px;
+    object-fit: cover;
 }

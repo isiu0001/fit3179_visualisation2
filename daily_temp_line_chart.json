@@ -39,7 +39,7 @@
           "type": "quantitative",
           "axis": {"title": "Average Maximum Temperature (°C)"},
           "scale": {
-            "domain": [15, 32]
+            "domain": [10, 35]
           }
         },
         "color": {
@@ -47,6 +47,9 @@
           "type": "nominal",
           "legend": {
             "title": "Capital Cities"
+          },
+          "scale": {
+            "scheme": "set1"
           }
         },
         "tooltip": [
