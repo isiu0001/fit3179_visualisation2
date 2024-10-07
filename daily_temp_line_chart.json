@@ -1,0 +1,163 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1300,
+  "height": 700,
+  "data": {
+    "url": "data/major_city_avg_max_temp.csv"
+  },
+  "params": [
+    {
+      "name": "citySelection",
+      "bind": {
+        "input": "select",
+        "options": ["All", "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Hobart"],
+        "name": "Select City"
+      },
+      "value": "All"
+    }
+  ],
+  "transform": [
+    {
+      "filter": "citySelection == 'All' || datum.Location == citySelection"
+    },
+    {
+      "calculate": "round(datum.MaxTemp * 100) / 100",
+      "as": "RoundedMaxTemp"
+    }
+  ],
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "axis": {"title": "Year", "orient": "bottom"} 
+        },
+        "y": {
+          "field": "MaxTemp",
+          "type": "quantitative",
+          "axis": {"title": "Average Maximum Temperature (°C)"},
+          "scale": {
+            "domain": [15, 32]
+          }
+        },
+        "color": {
+          "field": "Location",
+          "type": "nominal",
+          "legend": {
+            "title": "Capital Cities"
+          }
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal", "title": "Year"},
+          {"field": "RoundedMaxTemp", "type": "quantitative", "title": "Avg Max Temperature (°C)"},
+          {"field": "Location", "type": "nominal", "title": "City"}
+        ]
+      }
+    },
+    {
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "axis": {"orient": "bottom"}  
+        },
+        "y": {
+          "field": "MaxTemp",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Location",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal", "title": "Year"},
+          {"field": "RoundedMaxTemp", "type": "quantitative", "title": "Avg Max Temperature (°C)"},
+          {"field": "Location", "type": "nominal", "title": "City"}
+        ]
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {
+          "datum": 2013
+        },
+        "color": {"value": "red"},
+        "size": {"value": 2}
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "citySelection == 'All' || citySelection == 'Melbourne' || citySelection == 'Brisbane'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 750,
+        "dy": -90,
+        "fontSize": 12
+      },
+      "encoding": {
+        "x": {
+          "datum": 2015
+        },
+        "y": {
+          "datum": 29
+        },
+        "text": {
+          "value": "Brisbane usually hottest,\nbut briefly surpassed by Melbourne in 2015"
+        },
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "citySelection == 'All' || citySelection == 'Melbourne' || citySelection == 'Brisbane'"
+        }
+      ],
+      "mark": "rule",
+      "encoding": {
+        "x": {
+          "datum": 2015
+        },
+        "y": {
+          "datum": 28.5
+        },
+        "y2": {
+          "datum": 27.6
+        },
+        "color": {"value": "black"},
+        "strokeDash": [4, 2]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "citySelection == 'All' || citySelection == 'Melbourne' || citySelection == 'Brisbane'"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "shape": "triangle",
+        "size": 80,
+        "angle": 180,
+        "align": "center"
+      },
+      "encoding": {
+        "x": {
+          "value": 975
+        },
+        "y": {
+          "datum": 30.9
+        },
+        "color": {"value": "black"}
+      }
+    }
+  ]
+}
