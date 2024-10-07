@@ -3,7 +3,7 @@
   "width": 1300,
   "height": 700,
   "data": {
-    "url": "data/major_city_avg_max_temp.csv"
+    "url": "data/major_city_avg_max_temp2.csv"
   },
   "params": [
     {
@@ -110,10 +110,10 @@
           "datum": 2015
         },
         "y": {
-          "datum": 29
+          "datum": 30.6
         },
         "text": {
-          "value": "Brisbane usually hottest,\nbut briefly surpassed by Melbourne in 2015"
+          "value": "Darwin is the hottest city, being with the highest maximum temperate thorughout all years"
         },
         "color": {"value": "black"}
       }
@@ -154,10 +154,10 @@
       },
       "encoding": {
         "x": {
-          "value": 975
+          "value": 1005
         },
         "y": {
-          "datum": 30.9
+          "datum": 33.2
         },
         "color": {"value": "black"}
       }

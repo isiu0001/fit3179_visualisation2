@@ -23,7 +23,14 @@
         "axis": {"title": "Average Humidity (%)"},
         "scale": {"domain": [0, 100]}
       },
-      "color": {"field": "Location", "type": "nominal", "legend": {"title": "City"}}
+      "color": {
+        "field": "Location",
+         "type": "nominal", 
+         "legend": {"title": "City"},
+         "scale": {
+            "scheme": "set1"
+          }
+        }
     }
   }
   
