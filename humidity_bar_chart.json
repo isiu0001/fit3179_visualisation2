@@ -30,7 +30,12 @@
          "scale": {
             "scheme": "set1"
           }
-        }
+      },
+
+      "tooltip": [
+        {"field": "Location", "type": "nominal", "title": "City"},
+        {"field": "AvgHumidity", "type": "quantitative", "title": "Average Humidity (%)"}
+      ]
     }
   }
   
