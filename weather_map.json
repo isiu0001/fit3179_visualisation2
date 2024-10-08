@@ -3,8 +3,8 @@
   "width": 900,
   "height": 500,
   "projection": {
-    "type": "albers",
-    "scale": 800,
+    "type": "mercator",
+    "scale": 700,
     "rotate": [-135, 3.5], 
     "center": [0, -24.1339185], 
     "parallels": [-43.0331597, -5.2346774]
