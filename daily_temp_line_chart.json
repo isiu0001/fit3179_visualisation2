@@ -10,7 +10,7 @@
       "name": "citySelection",
       "bind": {
         "input": "select",
-        "options": ["All", "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Hobart"],
+        "options": ["All", "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Hobart", "Darwin"],
         "name": "Select City"
       },
       "value": "All"
@@ -95,7 +95,7 @@
     {
       "transform": [
         {
-          "filter": "citySelection == 'All' || citySelection == 'Melbourne' || citySelection == 'Brisbane'"
+          "filter": "citySelection == 'All' || citySelection == 'Darwin'"
         }
       ],
       "mark": {
@@ -113,7 +113,7 @@
           "datum": 30.6
         },
         "text": {
-          "value": "Darwin is the hottest city, being with the highest maximum temperate thorughout all years"
+          "value": "Darwin is the hottest city, with the highest maximum temperature throughout all years"
         },
         "color": {"value": "black"}
       }
@@ -121,7 +121,7 @@
     {
       "transform": [
         {
-          "filter": "citySelection == 'All' || citySelection == 'Melbourne' || citySelection == 'Brisbane'"
+          "filter": "citySelection == 'All' || citySelection == 'Darwin'"
         }
       ],
       "mark": "rule",
@@ -142,7 +142,7 @@
     {
       "transform": [
         {
-          "filter": "citySelection == 'All' || citySelection == 'Melbourne' || citySelection == 'Brisbane'"
+          "filter": "citySelection == 'All' || citySelection == 'Darwin'"
         }
       ],
       "mark": {
