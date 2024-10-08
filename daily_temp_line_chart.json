@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1300,
+  "width": 900,
   "height": 700,
   "data": {
     "url": "data/major_city_avg_max_temp2.csv"
@@ -101,8 +101,8 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "dx": 750,
-        "dy": -90,
+        "dx": 400,
+        "dy": -120,
         "fontSize": 12
       },
       "encoding": {
@@ -154,10 +154,10 @@
       },
       "encoding": {
         "x": {
-          "value": 1005
+          "value": 705
         },
         "y": {
-          "datum": 33.2
+          "datum": 34.2
         },
         "color": {"value": "black"}
       }
