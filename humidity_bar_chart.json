@@ -1,41 +1,51 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 900,
-    "height": 500,
-    "data": {
-      "values": [
-        {"Location": "Adelaide", "AvgHumidity": 62},
-        {"Location": "Brisbane", "AvgHumidity": 78},
-        {"Location": "Canberra", "AvgHumidity": 70},
-        {"Location": "Darwin", "AvgHumidity": 81},
-        {"Location": "Hobart", "AvgHumidity": 65},
-        {"Location": "Melbourne", "AvgHumidity": 67},
-        {"Location": "Perth", "AvgHumidity": 72},
-        {"Location": "Sydney", "AvgHumidity": 75}
-      ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 900,
+  "height": 500,
+  "data": {
+    "url": "data/major_city_humidity.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Location",
+      "type": "nominal",
+      "axis": {
+        "title": "City",
+        "labelAngle": 0
+      }
     },
-    "mark": "bar",
-    "encoding": {
-      "x": {"field": "Location", "type": "nominal", "axis": {"title": "City"}},
-      "y": {
+    "y": {
+      "field": "AvgHumidity",
+      "type": "quantitative",
+      "axis": {
+        "title": "Average Humidity (%)"
+      },
+      "scale": {
+        "domain": [0, 70]
+      }
+    },
+    "color": {
+      "field": "Location",
+      "type": "nominal",
+      "legend": {
+        "title": "City"
+      },
+      "scale": {
+        "scheme": "tableau10"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Location",
+        "type": "nominal",
+        "title": "City"
+      },
+      {
         "field": "AvgHumidity",
         "type": "quantitative",
-        "axis": {"title": "Average Humidity (%)"},
-        "scale": {"domain": [0, 100]}
-      },
-      "color": {
-        "field": "Location",
-         "type": "nominal", 
-         "legend": {"title": "City"},
-         "scale": {
-            "scheme": "set1"
-          }
-      },
-
-      "tooltip": [
-        {"field": "Location", "type": "nominal", "title": "City"},
-        {"field": "AvgHumidity", "type": "quantitative", "title": "Average Humidity (%)"}
-      ]
-    }
+        "title": "Average Humidity (%)"
+      }
+    ]
   }
-  
+}

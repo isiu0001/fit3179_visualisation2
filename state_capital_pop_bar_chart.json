@@ -1,0 +1,50 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Stacked bar chart comparing state and capital city populations.",
+    "width": 600,
+    "height": 400,
+    "data": {
+      "url": "data/aus_state_capital_population.csv"
+    },
+    "transform": [
+      {
+        "fold": ["State Population", "Capital City Population"],
+        "as": ["Population Type", "Population"]
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "State",
+        "type": "nominal",
+        "axis": {
+          "title": "State",
+          "labelAngle": 0
+        }
+      },
+      "y": {
+        "field": "Population",
+        "type": "quantitative",
+        "axis": {
+          "title": "Population"
+        }
+      },
+      "color": {
+        "field": "Population Type",
+        "type": "nominal",
+        "scale": {
+          "range": ["#1f77b4", "#ff7f0e"]
+        },
+        "legend": {
+          "title": "Population Type",
+          "labelExpr": "datum['Population Type'] === 'State Population' ? 'State' : 'Capital City'"
+        }
+      },
+      "tooltip": [
+        {"field": "State", "type": "nominal", "title": "State"},
+        {"field": "Population Type", "type": "nominal", "title": "Population Type"},
+        {"field": "Population", "type": "quantitative", "title": "Population"}
+      ]
+    }
+  }
+  

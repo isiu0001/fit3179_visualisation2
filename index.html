@@ -96,6 +96,16 @@
 
  
   
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <br><br><br>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h1>1) The weather Charateristic Of Each Captial Cities And Their Potential Climate Type</h1>
+      </div><!-- End Section Title -->
+
+    </section>
 
     <!-- first Section for the first idiom -->
     <section id="about" class="about section">
@@ -109,9 +119,9 @@
 
         <div class="row gy-4"?></div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200" >
             <div class="container">
-              <div class="container">
+              <div class="container" style="padding-left: 95px;">
                   <div id="map"></div>
               </div>
             </div>
@@ -134,8 +144,16 @@
           
         <div style="text-align: center;">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            This map shows the average rainfall in major Australian cities from 2008 to 2017, with bubble size and color indicating rainfall levels. Here's the ranking from highest to lowest rainfall:
+
+            Darwin: Highest rainfall due to its tropical climate.
+            Brisbane: High rainfall typical of a subtropical climate.
+            Sydney: Moderate rainfall reflecting its coastal location.
+            Perth: Medium rainfall with a Mediterranean climate.
+            Adelaide and Melbourne: Lower rainfall, in semi-arid and temperate regions.
+            Canberra: Inland location results in lower rainfall.
+            Hobart: Lowest rainfall due to its cool temperate climate.
+            This map highlights the varied rainfall patterns across Australia's major cities.
           </p>
         </div>
 
@@ -163,7 +181,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="container">
-              <div class="container">
+              <div class="container" style="padding-left: 95px;">
                   <div id="line-chart"></div>
               </div>
             </div>
@@ -176,6 +194,7 @@
       </div>
 
     </section><!-- /About Section -->
+
 
     <!-- second idiom explaantion Section -->
     <section id="why-us" class="section why-us light-background" data-builder="section">
@@ -213,7 +232,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="container">
-              <div class="container">
+              <div class="container" style="padding-left: 95px;">
                   <div id="bar-chart"></div>
               </div>
             </div>
@@ -232,7 +251,7 @@
 
       <div class="container-fluid">
 
-       
+        
           
         <div style="text-align: center;">
           <p>
@@ -246,9 +265,46 @@
 
     </section><!-- /Why Us Section -->
 
+    <br><br><br>
 
 
+     <!-- Services Section -->
+     <section id="services" class="services section light-background">
+
+      <br><br><br>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>1.5) Potential Constraint In Section 2</h2>
+      </div><!-- End Section Title -->
+
+    </section>
+
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="row gy-4">
+          
+        
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200" style="padding-left: 20px;">
+            <div id="stacked-bar-chart"></div>
+          </div>
+
+            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out" style="padding-right: 150px;">
+              <p>
+                As shown in the chart, each capital city represents a significant portion of its state's population. In many cases, such as Western Australia, over <strong>80%</strong> of the population resides in the capital city. On the other hand, Hobart, which has the smallest proportion, still makes up around 55%. This demonstrates that capital cities typically dominate their respective states in terms of population.
+              </p>
+              <p>
+                Thus, while relying on state-level data for energy consumption may slightly limit the accuracy of the analysis, it remains highly representative since most of each state's population lives in the capital city. Thus, energy patterns in capital cities are likely to reflect the broader state consumption trends.
+              </p>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
+
+   
 
     <!-- Skills Section -->
     <section id="skills" class="skills section">
@@ -919,6 +975,11 @@
       vegaEmbed('#bar-chart', 'humidity_bar_chart.json').then(function(result) {
       }).catch(console.error);
   </script>
+
+<script type="text/javascript">
+  vegaEmbed('#stacked-bar-chart', 'state_capital_pop_bar_chart.json').then(function(result) {
+  }).catch(console.error);
+</script>
 
 
   <!-- Vendor JS Files -->
