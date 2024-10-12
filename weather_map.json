@@ -45,7 +45,7 @@
             "size": {
               "field": "AvgRainfall",
               "type": "quantitative",
-              "title": "Average Rainfall (mm)",
+              "title": "Average Daily Rainfall (mm)",
               "scale": {
                  "range": [100, 1000]  
               },
@@ -64,7 +64,7 @@
                   "scheme": "blues",
                   "domain": [0,1,2,3,4,5]
               },
-              "title": "Average Rainfall (mm)",
+              "title": "Average Daily Rainfall (mm)",
               "legend": {
                   "orient": "right",  
                   "titleFontSize": 12,

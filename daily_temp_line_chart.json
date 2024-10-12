@@ -3,7 +3,7 @@
   "width": 900,
   "height": 500,
   "data": {
-    "url": "data/major_city_avg_max_temp2.csv"
+    "url": "data/major_city_avg_max_temp3.csv"
   },
   "params": [
     {
@@ -69,7 +69,8 @@
         "x": {
           "field": "Year",
           "type": "ordinal",
-          "axis": {"orient": "bottom"}  
+          "axis": null
+          
         },
         "y": {
           "field": "MaxTemp",
