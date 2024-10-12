@@ -43,7 +43,7 @@
           "type": "quantitative",
           "axis": {"title": "Average Maximum Temperature (°C)"},
           "scale": {
-            "domain": [10, 35]
+            "domain": [10, 40]
           }
         },
         "color": {
@@ -88,16 +88,6 @@
       }
     },
     {
-      "mark": "rule",
-      "encoding": {
-        "x": {
-          "datum": 2013
-        },
-        "color": {"value": "red"},
-        "size": {"value": 2}
-      }
-    },
-    {
       "transform": [
         {
           "filter": "citySelection == 'All' || citySelection == 'Darwin'"
@@ -106,42 +96,15 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "dx": 400,
-        "dy": -120,
+        "dx": -20,
+        "dy": -180,
         "fontSize": 12
       },
       "encoding": {
-        "x": {
-          "datum": 2015
-        },
-        "y": {
-          "datum": 30.6
-        },
         "text": {
           "value": "Darwin is the hottest city, with the highest maximum temperature throughout all years"
         },
-        "color": {"value": "black"}
-      }
-    },
-    {
-      "transform": [
-        {
-          "filter": "citySelection == 'All' || citySelection == 'Darwin'"
-        }
-      ],
-      "mark": "rule",
-      "encoding": {
-        "x": {
-          "datum": 2015
-        },
-        "y": {
-          "datum": 28.5
-        },
-        "y2": {
-          "datum": 27.6
-        },
-        "color": {"value": "black"},
-        "strokeDash": [4, 2]
+        "color": {"value": "#454545"}
       }
     },
     {
@@ -159,7 +122,7 @@
       },
       "encoding": {
         "x": {
-          "value": 705
+          "value": 675
         },
         "y": {
           "datum": 34.2

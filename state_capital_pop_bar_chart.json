@@ -10,6 +10,10 @@
       {
         "fold": ["State Population", "Capital City Population"],
         "as": ["Population Type", "Population"]
+      },
+      {
+        "calculate": "datum.State == 'Australian Capital Territory' ? 'ACT' : datum.State == 'New South Wales' ? 'NSW' : datum.State",
+        "as": "State"
       }
     ],
     "mark": "bar",
@@ -36,8 +40,7 @@
           "range": ["#1f77b4", "#ff7f0e"]
         },
         "legend": {
-          "title": "Population Type",
-          "labelExpr": "datum['Population Type'] === 'State Population' ? 'State' : 'Capital City'"
+          "title": "Population Type"
         }
       },
       "tooltip": [
