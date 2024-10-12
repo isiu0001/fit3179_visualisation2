@@ -5,7 +5,10 @@
   "data": {
     "url": "data/major_city_humidity.csv"
   },
-  "mark": "bar",
+  "mark": {
+    "type": "bar",
+    "width": 70
+  },
   "encoding": {
     "x": {
       "field": "Location",
