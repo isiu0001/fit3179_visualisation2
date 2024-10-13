@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Stacked bar chart comparing state and capital city populations.",
-    "width": 600,
-    "height": 400,
+    "width": 550,
+    "height": 350,
     "data": {
       "url": "data/aus_state_capital_population.csv"
     },

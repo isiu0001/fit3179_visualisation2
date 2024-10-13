@@ -1,0 +1,34 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "data/electricity_per_capita.csv"
+    },
+    "width": 500,
+    "height": 350,
+
+    "mark": {
+      "type": "arc",
+      "innerRadius": 50
+    },
+    "encoding": {
+      "theta": {
+        "field": "Electricity Consumption Per Capita (PJ per million people)",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "State or Territory",
+        "type": "nominal"
+      },
+      "tooltip": [
+      {"field": "State or Territory", "type": "nominal", "title": "State"},
+      {"field": "Electricity Consumption Per Capita (PJ per million people)", "type": "quantitative", "title": "Electricity per Capita (PJ per Million)"}
+    ]
+    },
+
+    
+    
+    "view": {
+      "stroke": null
+    }
+  }
+  

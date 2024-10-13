@@ -61,7 +61,7 @@
     <section id="hero" class="hero section dark-background">
 
       <div class="container">
-        <h1>Weather Patterns Across Australia's Capital Cities and Their Potential Impact on Energy Consumption</h1>
+        <h1>Weather Patterns Across Australia's Capital Cities and Their Potential Impact on Resource Consumption</h1>
 
         <br><br><br>
 
@@ -78,7 +78,7 @@
               While Darwin enjoys tropical heat, cold winds from the Antarctic sweep through Hobart, just 500 kilometers away. This contrast underscores the unique and varied climates across the country.
               
               <br><br>
-              In this visualization, we explore the weather patterns of Australia’s major cities, revealing the diversity that makes its climate truly distinctive. We will also examine how these weather patterns may correlate with energy usage across the country.
+              In this visualization, we explore the weather patterns of Australia’s major cities, revealing the diversity that makes its climate truly distinctive. We will also examine how these weather patterns may correlate with resource consumption (e.g water usage, electrictiy usage) across the country.
             </p>
 
             <div class="d-flex">
@@ -202,7 +202,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="container">
-              <div class="container" style="padding-left: 95px;">
+              <div class="container" style="padding-left: 125px;">
                   <div id="line-chart"></div>
               </div>
             </div>
@@ -285,7 +285,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="container">
-              <div class="container" style="padding-left: 120px;">
+              <div class="container" style="padding-left: 125px;">
                   <div id="bar-chart"></div>
               </div>
             </div>
@@ -359,11 +359,11 @@
 
         <div class="row">
 
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out" style="padding-right: 150px;">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out" style="padding-right: 50px;">
             <img src="assets/img/skills.png" class="img-fluid" alt="">
           </div>
 
-          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200" style="padding-left: 20px;">
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200" style="padding-left: 150px;">
 
            
             <p>
@@ -460,7 +460,7 @@
           
         <div style="text-align: center; padding-top: 50px; padding-bottom: 30px;">
           <p>
-            After identifying the climate types of each city, we will now delve into the energy consumption data of these cities. By examining this data, we aim to uncover any potential correlations between weather patterns and energy usage, exploring how climate may influence energy demands across Australia’s diverse cities.
+            After identifying the climate types of each city, we will now delve into the resource consumption data of these cities. By examining this data, we aim to uncover any potential correlations between weather patterns and resource usage, exploring how climate may influence resource demands across Australia’s diverse cities.
           </p>
         </div>
 
@@ -494,7 +494,7 @@
          
        <div style="text-align: center; padding-top: 50px; padding-bottom: 30px;">
          <p>
-            Before analyzing the correlation between climate type and energy usage, it’s important to acknowledge a limitation: city-specific energy data is unavailable, so state-wide energy data is being used instead. While this may slightly reduce the precision of the analysis, the impact is minimal because...
+            Before analyzing the correlation between climate type and resource usage, it’s important to acknowledge a limitation: city-specific energy data is unavailable, so state-wide energy data is being used instead. While this may slightly reduce the precision of the analysis, the impact is minimal because...
          </p>
        </div>
 
@@ -509,11 +509,14 @@
         <div class="row gy-4">
           
         
-          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200" style="padding-left: 20px;">
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200" style="padding-left: 50px;">
+            <div class="container section-title" data-aos="fade-up" style="padding-left: 115px;">
+              <h4>Electricity Consumption (PJ) Per Capita (Million) by State</h4>
+            </div>
             <div id="stacked-bar-chart"></div>
           </div>
 
-            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out" style="padding-right: 150px;">
+            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out" style="padding-right: 60px;">
               <p>
                 As shown in the chart, each capital city represents a significant portion of its state's population. In many cases, such as Western Australia, over <strong>80%</strong> of the population resides in the capital city. On the other hand, Hobart, which has the smallest proportion, still makes up around 55%. This demonstrates that capital cities typically dominate their respective states in terms of population.
               </p>
@@ -536,11 +539,74 @@
         <br><br><br>
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h1>Section 2) Correlation Between Energy Usage and Climate Type Across Australian States</h1>
+          <h1>Section 2) Correlation Between Resource Consumption and Climate Type Across Australian States</h1>
         </div><!-- End Section Title -->
   
       </section>
 
+
+      <section id="idiom5" class="about section">
+        <div class="container">
+          <div class="row gy-4">
+            
+          
+           
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200" style="padding-left: 100px; padding-top: 110px;">
+                
+                <p>
+                  The chart shows that the Northern Territory has the highest electricity consumption per capita, likely due to its <strong>tropical climate</strong> in Darwin, where the hot, humid weather drives higher demand for cooling system like air conditioning. This suggests a possible correlation between climate and energy usage in tropical regions.
+                </p>
+                
+                <p>
+                  For other climate types, the influence seems less pronounced. Western Australia, with a <strong>Mediterranean climate</strong>, has the second highest consumption, while South Australia, with the same climate, has the lowest, indicating that climate may not be the main factor. States with <strong>oceanic</strong> and <strong>subtropical</strong> climates— New South Wales, Queensland, and Victoria —show stable, mid-tier electricity consumption, suggesting that climate may not have a strong influence in these regions.
+                </p>
+                
+  
+                
+              </div>
+
+
+              <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out" style="padding-right: 150px;">
+                <div class="container section-title" data-aos="fade-up" style="padding-left: 50px">
+                  <h4>Electricity Consumption (PJ) Per Capita (Million) by State</h4>
+                </div>
+                <div id="donut-chart"></div>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br><br><br>
+
+
+      <section id="about" class="about section">
+        <div class="container">
+          <div class="row gy-4">
+            
+          
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200" style="padding-left: 100px;">
+              <div class="container section-title" data-aos="fade-up" style="padding-left: 115px;">
+                <h4>Water consumption (mL) per capita across Australian states</h4>
+              </div>
+              <div id="lolipop-chart"></div>
+            </div>
+  
+              <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out" style="padding-right: 60px;">
+                <p>
+                  As shown in the chart, each capital city represents a significant portion of its state's population. In many cases, such as Western Australia, over <strong>80%</strong> of the population resides in the capital city. On the other hand, Hobart, which has the smallest proportion, still makes up around 55%. This demonstrates that capital cities typically dominate their respective states in terms of population.
+                </p>
+                <p>
+                  Thus, while relying on state-level data for energy consumption may slightly limit the accuracy of the analysis, it remains highly representative since most of each state's population lives in the capital city. Thus, energy patterns in capital cities are likely to reflect the broader state consumption trends.
+                </p>
+  
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
     
@@ -1053,6 +1119,17 @@
     }).catch(console.error);
   </script>
 
+
+  <script type="text/javascript">
+    vegaEmbed('#donut-chart', 'electricity_usage_donut_chart.json').then(function(result) {
+    }).catch(console.error);
+  </script>
+
+
+  <script type="text/javascript">
+    vegaEmbed('#lolipop-chart', 'water_usage_lolipop.json').then(function(result) {
+    }).catch(console.error);
+  </script>
 
 
   <!-- Vendor JS Files -->
