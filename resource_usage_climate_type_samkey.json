@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Sankey diagram showing resource usage (water, gas, electricity) per climate type across Australian states.",
+    "data": {
+      "url": "data/resource_usage_climate_type.csv"
+    },
+    "width": 900,
+    "height": 500,
+    "transform": [
+      {
+        "filter": "datum.Value > 0"
+      }
+    ],
+    "mark": {
+      "type": "rect",
+      "tooltip": true
+    },
+    "encoding": {
+      "x": {
+        "field": "Resource Usage",
+        "type": "nominal",
+        "title": "Resource Usage",
+        "axis": {
+          "labelAngle": 0
+        }
+      },
+      "x2": {
+        "field": "Climate Type",
+        "type": "nominal",
+        "title": "Climate Type"
+      },
+      "y": {
+        "aggregate": "sum",
+        "field": "Value",
+        "type": "quantitative",
+        "title": "Value"
+      },
+      "color": {
+        "field": "Climate Type",
+        "type": "nominal"
+      },
+      "tooltip": [
+        {"field": "Resource Usage", "type": "nominal", "title": "Resource"},
+        {"field": "Climate Type", "type": "nominal", "title": "Climate Type"},
+        {"field": "Value", "type": "quantitative", "title": "Usage Value"}
+      ]
+    }
+  }
+  

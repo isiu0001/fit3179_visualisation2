@@ -16,14 +16,18 @@
       "type": "nominal",
       "axis": {
         "title": "City",
-        "labelAngle": 0
+        "labelAngle": 0,
+        "titleFontSize": 15,
+        "labelFontSize": 12
       }
     },
     "y": {
       "field": "AvgHumidity",
       "type": "quantitative",
       "axis": {
-        "title": "Average Humidity (%)"
+        "title": "Average Humidity (%)",
+        "titleFontSize": 15,
+        "labelFontSize": 12
       },
       "scale": {
         "domain": [0, 70]
@@ -33,7 +37,9 @@
       "field": "Location",
       "type": "nominal",
       "legend": {
-        "title": "City"
+        "title": "City",
+        "titleFontSize": 12,
+        "labelFontSize": 10
       },
       "scale": {
         "scheme": "tableau10"

@@ -23,6 +23,11 @@
           "domain": ["South Australia", "Queensland", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "New South Wales"],
           "range": ["#5778a4", "#e49444", "#85b6b2", "#6a9f58", "#e7ca60", "#a87c9f", "#f1a2a9"]
         },
+        "legend": {
+            "title": "State",
+            "titleFontSize": 12,
+            "labelFontSize": 10
+        },
         "sort": ["South Australia", "Queensland", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "New South Wales"]
       },
       "tooltip": [

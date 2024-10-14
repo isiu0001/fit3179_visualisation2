@@ -27,10 +27,7 @@
   ],
   "layer": [
     {
-      "mark": {
-        "type": "line",
-        "opacity": 0.7  
-      },
+      "mark": "line",
       "encoding": {
         "x": {
           "field": "Year",
@@ -38,15 +35,21 @@
           "axis": {
             "title": "Year", 
             "orient": "bottom",
-            "labelAngle": 0
+            "labelAngle": 0,
+            "titleFontSize": 15,
+            "labelFontSize": 12
           } 
         },
         "y": {
           "field": "MaxTemp",
           "type": "quantitative",
-          "axis": {"title": "Average Maximum Temperature (°C)"},
+          "axis": {
+            "title": "Average Maximum Temperature (°C)",
+            "titleFontSize": 15,
+            "labelFontSize": 12
+          },
           "scale": {
-            "domain": [10, 40]
+            "domain": [10, 35]
           }
         },
         "color": {
@@ -99,15 +102,42 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "dx": -20,
-        "dy": -180,
+        "dx": 400,
+        "dy": -120,
         "fontSize": 12
       },
       "encoding": {
+        "x": {
+          "datum": 2015
+        },
+        "y": {
+          "datum": 28.1
+        },
         "text": {
           "value": "Darwin is the hottest city, with the highest maximum temperature throughout all years"
         },
-        "color": {"value": "#454545"}
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "citySelection == 'All' || citySelection == 'Darwin'"
+        }
+      ],
+      "mark": "rule",
+      "encoding": {
+        "x": {
+          "datum": 2015
+        },
+        "y": {
+          "datum": 28.5
+        },
+        "y2": {
+          "datum": 27.6
+        },
+        "color": {"value": "black"},
+        "strokeDash": [4, 2]
       }
     },
     {
@@ -125,10 +155,10 @@
       },
       "encoding": {
         "x": {
-          "value": 675
+          "value": 675  
         },
         "y": {
-          "datum": 34.2
+          "datum": 33.2
         },
         "color": {"value": "black"}
       }

@@ -6,40 +6,6 @@
     },
     "width": 550,
     "height": 350,
-    "mark": {
-      "type": "circle",
-      "color": "orange",
-      "size": 100,
-      "opacity": 1
-      
-    },
-    "encoding": {
-      "x": {
-        "field": "State or Territory",
-        "type": "nominal",
-        "axis": {
-            "title": "State",
-            "labelAngle": 0
-        },
-        "sort": ["South Australia", "Queensland", "ACT", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "NSW"]
-      },
-      "y": {
-        "field": "Water Consumption (Megaliters per capita)",
-        "type": "quantitative"
-      },
-      "color": {
-        "field": "State or Territory",
-        "type": "nominal",
-        "scale": {
-            "domain": ["South Australia", "Queensland", "ACT", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "NSW"],
-            "range": ["#5778a4", "#e49444", "#d1615d", "#85b6b2", "#6a9f58", "#e7ca60", "#a87c9f", "#f1a2a9"]
-        },
-        "legend": {
-            "title": "State or Territory",
-            "labelExpr": "datum.value === 'NSW' ? 'New South Wales' : datum.value === 'ACT' ? 'Australian Capital Territory' : datum.value"
-        }
-      }
-    },
     "layer": [
       {
         "mark": {
@@ -49,11 +15,25 @@
         "encoding": {
           "x": {
             "field": "State or Territory",
-            "type": "nominal"
+            "type": "nominal",
+            "axis": {
+              "title": "State",
+              "labelAngle": 0,
+              "titleFontSize": 15,
+              "labelFontSize": 10
+            },
+            "sort": ["South Australia", "Queensland", "ACT", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "NSW"]
           },
           "y": {
             "field": "Water Consumption (Megaliters per capita)",
-            "type": "quantitative"
+            "type": "quantitative",
+            "scale": {
+              "domain": [0, 0.9]
+            },
+            "axis":{
+              "titleFontSize": 15,
+              "labelFontSize": 12
+            }
           }
         }
       },
@@ -77,7 +57,48 @@
             {"field": "Water Consumption (Megaliters per capita)", "type": "quantitative", "title": "Water Consumption (mL per capita)"}
           ]
         }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "bottom",
+          "dy": -10,  
+          "fontSize": 12,
+          "color": "black"
+        },
+        "encoding": {
+          "x": {
+            "field": "State or Territory",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Water Consumption (Megaliters per capita)",
+            "type": "quantitative"
+          },
+          "text": {
+            "field": "Water Consumption (Megaliters per capita)",
+            "type": "quantitative",
+            "format": ".2f"  
+          }
+        }
       }
-    ]
+    ],
+    "encoding": {
+      "color": {
+        "field": "State or Territory",
+        "type": "nominal",
+        "scale": {
+          "domain": ["South Australia", "Queensland", "ACT", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "NSW"],
+          "range": ["#5778a4", "#e49444", "#d1615d", "#85b6b2", "#6a9f58", "#e7ca60", "#a87c9f", "#f1a2a9"]
+        },
+        "legend": {
+          "title": "State or Territory",
+          "labelExpr": "datum.value === 'NSW' ? 'New South Wales' : datum.value === 'ACT' ? 'Australian Capital Territory' : datum.value",
+          "titleFontSize": 12,
+          "labelFontSize": 10
+        }
+      }
+    }
   }
   
