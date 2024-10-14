@@ -37,7 +37,8 @@
             "orient": "bottom",
             "labelAngle": 0,
             "titleFontSize": 15,
-            "labelFontSize": 12
+            "labelFontSize": 12,
+            "titlePadding": 10
           } 
         },
         "y": {
@@ -46,7 +47,8 @@
           "axis": {
             "title": "Average Maximum Temperature (°C)",
             "titleFontSize": 15,
-            "labelFontSize": 12
+            "labelFontSize": 12,
+            "titlePadding": 20
           },
           "scale": {
             "domain": [10, 35]

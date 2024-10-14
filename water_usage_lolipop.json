@@ -20,7 +20,8 @@
               "title": "State",
               "labelAngle": 0,
               "titleFontSize": 15,
-              "labelFontSize": 10
+              "labelFontSize": 10,
+              "titlePadding": 10
             },
             "sort": ["South Australia", "Queensland", "ACT", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "NSW"]
           },
@@ -32,7 +33,8 @@
             },
             "axis":{
               "titleFontSize": 15,
-              "labelFontSize": 12
+              "labelFontSize": 12,
+              "titlePadding": 20
             }
           }
         }

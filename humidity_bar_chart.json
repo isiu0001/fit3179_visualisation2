@@ -27,7 +27,8 @@
       "axis": {
         "title": "Average Humidity (%)",
         "titleFontSize": 15,
-        "labelFontSize": 12
+        "labelFontSize": 12,
+        "titlePadding": 20
       },
       "scale": {
         "domain": [0, 70]
