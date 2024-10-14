@@ -69,7 +69,9 @@
                   "orient": "right",  
                   "titleFontSize": 12,
                   "labelFontSize": 10,
-                  "padding": 30
+                  "padding": 30,
+                  "symbolSize": 30
+
                 }
             },
             "tooltip": [
