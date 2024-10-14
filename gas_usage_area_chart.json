@@ -3,8 +3,8 @@
     "data": {
       "url": "data/gas_consumption_state.csv"
     },
-    "width": 900,
-    "height": 500,
+    "width": 500,
+    "height": 350,
     "mark": {
       "type": "area",
       "tooltip": true,
