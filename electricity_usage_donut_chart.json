@@ -8,7 +8,8 @@
   
     "mark": {
       "type": "arc",
-      "innerRadius": 50
+      "innerRadius": 50,
+      "opacity": 0.88
     },
     "encoding": {
       "theta": {
