@@ -30,6 +30,7 @@
         "type": "quantitative",
         "title": "Gas Consumption per Capita (PJ per million)",
         "axis": {
+
             "titleFontSize": 15,
             "labelFontSize": 12
         }
