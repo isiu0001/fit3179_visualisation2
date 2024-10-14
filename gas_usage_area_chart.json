@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "data/gas_consumption_state.csv"
+    },
+    "width": 900,
+    "height": 500,
+    "mark": {
+      "type": "area",
+      "tooltip": true,
+      "interpolate": "monotone",
+      "opacity": 0.88
+    },
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year",
+        "axis":{
+            "labelAngle": 0
+        }
+      },
+      "y": {
+        "field": "Gas Consumption per Capita (PJ per million)",
+        "type": "quantitative",
+        "title": "Gas Consumption per Capita (PJ per million)"
+      },
+      "color": {
+        "field": "State",
+        "scale": {
+          "domain": ["South Australia", "Queensland", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "New South Wales"],
+          "range": ["#5778a4", "#e49444", "#85b6b2", "#6a9f58", "#e7ca60", "#a87c9f", "#f1a2a9"]
+        },
+        "title": "State"
+      },
+      "tooltip": [
+        {"field": "State", "type": "nominal", "title": "State"},
+        {"field": "Year", "type": "ordinal", "title": "Year"},
+        {"field": "Gas Consumption per Capita (PJ per million)", "type": "quantitative", "title": "Gas Consumption (PJ) per Million"}
+      ]
+    }
+  }
+  
