@@ -24,7 +24,8 @@
         "axis": {
           "title": "State",
           "labelAngle": 0
-        }
+        },
+        "sort": ["South Australia", "Queensland", "ACT", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "NSW"]  
       },
       "y": {
         "field": "Population",

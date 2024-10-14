@@ -5,7 +5,7 @@
     },
     "width": 500,
     "height": 350,
-
+  
     "mark": {
       "type": "arc",
       "innerRadius": 50
@@ -17,18 +17,21 @@
       },
       "color": {
         "field": "State or Territory",
-        "type": "nominal"
+        "type": "nominal",
+        "scale": {
+          "domain": ["South Australia", "Queensland", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "New South Wales"],
+          "range": ["#5778a4", "#e49444", "#85b6b2", "#6a9f58", "#e7ca60", "#a87c9f", "#f1a2a9"]
+        },
+        "sort": ["South Australia", "Queensland", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "New South Wales"]
       },
       "tooltip": [
-      {"field": "State or Territory", "type": "nominal", "title": "State"},
-      {"field": "Electricity Consumption Per Capita (PJ per million people)", "type": "quantitative", "title": "Electricity per Capita (PJ per Million)"}
-    ]
+        {"field": "State or Territory", "type": "nominal", "title": "State"},
+        {"field": "Electricity Consumption Per Capita (PJ per million people)", "type": "quantitative", "title": "Electricity per Capita (PJ per Million)"}
+      ]
     },
-
-    
-    
+  
     "view": {
       "stroke": null
     }
-  }
+}
   
