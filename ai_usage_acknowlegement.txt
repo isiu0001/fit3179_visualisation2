@@ -1,1 +1,5 @@
-For this visualisation, AI is used for helping data cleaning (following my order and idea), as well improving the writting style and grammar, and getting vegalite debug suggestion when relevant discussion or tutorial is not available on the internet and moodle materials.
+For this visualisation, I used AI in the following ways:
+
+1) helping data cleaning (following my order and idea)
+2) improving the writting style and grammar
+3) getting vegalite debug suggestion when relevant discussion or tutorial is not available on the internet and moodle materials.
