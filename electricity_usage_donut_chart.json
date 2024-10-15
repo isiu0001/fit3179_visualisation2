@@ -6,35 +6,230 @@
     "width": 500,
     "height": 350,
   
-    "mark": {
-      "type": "arc",
-      "innerRadius": 50,
-      "opacity": 0.88
-    },
-    "encoding": {
-      "theta": {
-        "field": "Electricity Consumption Per Capita (PJ per million people)",
-        "type": "quantitative"
+    "layer":[
+      {
+        "mark": {
+        "type": "arc",
+        "innerRadius": 50,
+        "opacity": 0.88
       },
-      "color": {
-        "field": "State or Territory",
-        "type": "nominal",
-        "scale": {
-          "domain": ["South Australia", "Queensland", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "New South Wales"],
-          "range": ["#5778a4", "#e49444", "#85b6b2", "#6a9f58", "#e7ca60", "#a87c9f", "#f1a2a9"]
-        },
-        "legend": {
-            "title": "State",
-            "titleFontSize": 12,
-            "labelFontSize": 10
-        },
-        "sort": ["South Australia", "Queensland", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "New South Wales"]
-      },
-      "tooltip": [
-        {"field": "State or Territory", "type": "nominal", "title": "State"},
-        {"field": "Electricity Consumption Per Capita (PJ per million people)", "type": "quantitative", "title": "Electricity per Capita (PJ per Million)"}
-      ]
+        "encoding": {
+          "theta": {
+            "field": "Electricity Consumption Per Capita (PJ per million people)",
+            "type": "quantitative"
+          },
+          "color": {
+            "field": "State or Territory",
+            "type": "nominal",
+            "scale": {
+              "domain": ["South Australia", "Queensland", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "New South Wales"],
+              "range": ["#5778a4", "#e49444", "#85b6b2", "#6a9f58", "#e7ca60", "#a87c9f", "#f1a2a9"]
+            },
+            "legend": {
+                "title": "State",
+                "titleFontSize": 12,
+                "labelFontSize": 10
+            },
+            "sort": ["South Australia", "Queensland", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "New South Wales"]
+          },
+          "tooltip": [
+            {"field": "State or Territory", "type": "nominal", "title": "State"},
+            {"field": "Electricity Consumption Per Capita (PJ per million people)", "type": "quantitative", "title": "Electricity per Capita (PJ per Million)"}
+          ]
+      }
     },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100
+      },
+      "encoding": {
+        "x": {
+          "value": 265
+        },
+        "y": {
+          "value": 65,
+          "axis": null
+        },
+        "text": {
+          "value": "NSW"
+        },
+        "color": {"value": "#49494a"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100,
+        "angle": -40
+      },
+      "encoding": {
+        "x": {
+          "value": 145
+        },
+        "y": {
+          "value": 135,
+          "axis": null
+        },
+        "text": {
+          "value": "Western Australia"
+        },
+        "color": {"value": "#49494a"}
+      }
+    },
+  
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100
+      },
+      "encoding": {
+        "x": {
+          "value": 125
+        },
+        "y": {
+          "value": 195,
+          "axis": null
+        },
+        "text": {
+          "value": "Victoria"
+        },
+        "color": {"value": "#49494a"}
+      }
+    },
+  
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100,
+        "angle": 35
+      },
+      "encoding": {
+        "x": {
+          "value": 135
+        },
+        "y": {
+          "value": 255,
+          "axis": null
+        },
+        "text": {
+          "value": "Tasmania"
+        },
+        "color": {"value": "#49494a"}
+      }
+    },
+  
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100,
+        "angle": 10
+      },
+      "encoding": {
+        "x": {
+          "value": 212
+        },
+        "y": {
+          "value": 275,
+          "axis": null
+        },
+        "text": {
+          "value": "South"
+        },
+        "color": {"value": "#49494a"}
+      }
+    },
+  
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100,
+        "angle": 10
+      },
+      "encoding": {
+        "x": {
+          "value": 199
+        },
+        "y": {
+          "value": 295,
+          "axis": null
+        },
+        "text": {
+          "value": "Australia"
+        },
+        "color": {"value": "#49494a"}
+      }
+    },
+  
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100,
+        "angle": -30
+      },
+      "encoding": {
+        "x": {
+          "value": 270
+        },
+        "y": {
+          "value": 295,
+          "axis": null
+        },
+        "text": {
+          "value": "Queensland"
+        },
+        "color": {"value": "#49494a"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100,
+        "angle": -10
+      },
+      "encoding": {
+        "x": {
+          "value": 305
+        },
+        "y": {
+          "value": 165,
+          "axis": null
+        },
+        "text": {
+          "value": "Northern Territory"
+        },
+        "color": {"value": "#49494a"}
+      }
+    }
+
+
+
+
+  ],
   
     "view": {
       "stroke": null
