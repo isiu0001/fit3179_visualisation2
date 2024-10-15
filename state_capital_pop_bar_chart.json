@@ -15,49 +15,137 @@
         "as": "State"
       }
     ],
-    "mark":{ 
-      "type":"bar",
-      "opacity": 0.8
-  
+    "layer":[
+    {
+        "mark":{ 
+          "type":"bar",
+          "opacity": 0.8
+      
+        },
+        "encoding": {
+          "x": {
+            "field": "State",
+            "type": "nominal",
+            "axis": {
+              "title": "State",
+              "labelAngle": 0,
+              "titleFontSize": 15,
+              "labelFontSize": 10
+            },
+            "sort": ["South Australia", "Queensland", "ACT", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "NSW"]  
+          },
+          "y": {
+            "field": "Population",
+            "type": "quantitative",
+            "axis": {
+              "title": "Population",
+              "titleFontSize": 15,
+              "labelFontSize": 12
+            }
+          },
+          "color": {
+            "field": "Population Type",
+            "type": "nominal",
+            "scale": {
+              "range": ["#BFFF00", "#D3A297"]
+            },
+            "legend": {
+              "title": "Population Type",
+              "titleFontSize": 12,
+              "labelFontSize": 10
+            }
+          },
+          "tooltip": [
+            {"field": "State", "type": "nominal", "title": "State"},
+            {"field": "Population Type", "type": "nominal", "title": "Population Type"},
+            {"field": "Population", "type": "quantitative", "title": "Population"}
+          ]
+      }
     },
-    "encoding": {
-      "x": {
-        "field": "State",
-        "type": "nominal",
-        "axis": {
-          "title": "State",
-          "labelAngle": 0,
-          "titleFontSize": 15,
-          "labelFontSize": 10
+    {
+      
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100
+      },
+      "encoding": {
+        "x": {
+          "value": 140
         },
-        "sort": ["South Australia", "Queensland", "ACT", "Northern Territory", "Tasmania", "Victoria", "Western Australia", "NSW"]  
-      },
-      "y": {
-        "field": "Population",
-        "type": "quantitative",
-        "axis": {
-          "title": "Population",
-          "titleFontSize": 15,
-          "labelFontSize": 12
-        }
-      },
-      "color": {
-        "field": "Population Type",
-        "type": "nominal",
-        "scale": {
-          "range": ["#BFFF00", "#D3A297"]
+        "y": {
+          "value": 255
         },
-        "legend": {
-          "title": "Population Type",
-          "titleFontSize": 12,
-          "labelFontSize": 10
-        }
+        "text": {
+          "value": "In the ACT"
+        },
+        "color": {"value": "#49494a"}
+      }
+    },
+    {
+      
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100
       },
-      "tooltip": [
-        {"field": "State", "type": "nominal", "title": "State"},
-        {"field": "Population Type", "type": "nominal", "title": "Population Type"},
-        {"field": "Population", "type": "quantitative", "title": "Population"}
-      ]
+      "encoding": {
+        "x": {
+          "value": 140
+        },
+        "y": {
+          "value": 275
+        },
+        "text": {
+          "value": "the entire population"
+        },
+        "color": {"value": "#49494a"}
+      }
+    },
+    {
+      
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100
+      },
+      "encoding": {
+        "x": {
+          "value": 140
+        },
+        "y": {
+          "value": 295
+        },
+        "text": {
+          "value": "resides in Canberra."
+        },
+        "color": {"value": "#49494a"}
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "shape": "triangle",
+        "size": 80,
+        "angle": 180,
+        "align": "center"
+      },
+      "encoding": {
+        "x": {
+          "value": 180
+        },
+        "y": {
+          "value": 315
+        },
+        "color": {"value": "black"}
+      }
     }
+  ]
   }
   

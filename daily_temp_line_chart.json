@@ -119,14 +119,37 @@
           "value": 350
         },
         "y": {
-          "datum": 34.9
+          "datum": 36.1
         },
         "text": {
-          "value": "Darwin is the hottest city, with the highest maximum temperature throughout all years, \n indicating it might has distinct climate type from other cities"
+          "value": "Darwin is the hottest city, with the highest maximum temperature throughout all years"
         },
         "color": {"value": "#49494a"}
       }
     },
+    {
+      
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100
+      },
+      "encoding": {
+        "x": {
+          "value": 350
+        },
+        "y": {
+          "datum": 34.9
+        },
+        "text": {
+          "value": "indicating it might has distinct climate type from other cities"
+        },
+        "color": {"value": "#49494a"}
+      }
+    },
+  
     {
       "transform": [
         {
