@@ -111,7 +111,7 @@
         "type": "text",
         "align": "left",
         "fontSize": 12,
-        "font": "Arial",
+        "font": "Helvetica",
         "fontWeight": 100
       },
       "encoding": {
