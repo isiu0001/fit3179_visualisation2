@@ -112,7 +112,7 @@
         "align": "left",
         "fontSize": 12,
         "font": "Arial",
-        "fontWeight": "normal"
+        "fontWeight": 100
       },
       "encoding": {
         "x": {
