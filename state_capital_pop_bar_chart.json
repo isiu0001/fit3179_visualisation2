@@ -45,7 +45,7 @@
         "field": "Population Type",
         "type": "nominal",
         "scale": {
-          "range": ["#140038", "#704000"]
+          "range": ["#BFFF00", "#00FFFF"]
         },
         "legend": {
           "title": "Population Type",
