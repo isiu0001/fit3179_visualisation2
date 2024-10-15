@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Stacked bar chart comparing state and capital city populations.",
     "width": 550,
     "height": 350,
     "data": {

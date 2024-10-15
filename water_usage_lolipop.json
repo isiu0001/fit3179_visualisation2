@@ -66,8 +66,7 @@
           "align": "center",
           "baseline": "bottom",
           "dy": -10,  
-          "fontSize": 12,
-          "color": "black"
+          "fontSize": 12
         },
         "encoding": {
           "x": {

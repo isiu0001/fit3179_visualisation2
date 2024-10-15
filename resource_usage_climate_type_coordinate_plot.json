@@ -1,81 +1,89 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A heatmap showing the percentage contribution of each Climate Type to Resource Usages with percentage labels.",
-    "data": {
-      "url": "data/resource_usage_climate_type.csv"
-    },
-    "width": 900,
-    "height": 500,
-    "layer": [
-      {
-        "mark": "rect",
-        "encoding": {
-          "x": {
-            "field": "Resource Usage",
-            "type": "nominal",
-            "title": "Resource Usage",
-            "axis":{
-                "labelAngle": 0,
-                "titleFontSize": 15,
-                "labelFontSize": 12,
-                "titlePadding": 20
-            }
-          },
-          "y": {
-            "field": "Climate Type",
-            "type": "nominal",
-            "title": "Climate Type",
-            "axis":{
-            
-                "titleFontSize": 15,
-                "labelFontSize": 12,
-                "titlePadding": 10
-            }
-        
-          },
-          "color": {
-            "field": "UsagePercentage",
-            "type": "quantitative",
-            "title": "Usage Percentage (%)",
-            "scale": {"scheme": "blues"},
-            "legend": {
-                "title": "Usage Percentage (%)",
-                "titleFontSize": 12,
-                "labelFontSize": 10
-            }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A heatmap showing the percentage contribution of each Climate Type to Resource Usages with percentage labels.",
+  "data": {
+    "url": "data/resource_usage_climate_type.csv"
+  },
+  "width": 900,
+  "height": 500,
+  "transform": [
+    {
+      "aggregate": [{"op": "mean", "field": "UsagePercentage", "as": "UsagePercentage"}],
+      "groupby": ["Climate Type", "Resource Usage"]
+    }
+  ],
+  "layer": [
+    {
+      "mark": "rect",
+      "encoding": {
+        "x": {
+          "field": "Resource Usage",
+          "type": "nominal",
+          "title": "Resource Usage",
+          "axis": {
+            "labelAngle": 0,
+            "titleFontSize": 15,
+            "labelFontSize": 12,
+            "titlePadding": 20
           }
-        }
-      },
-      {
-        "mark": {
-          "type": "text",
-          "align": "center",
-          "baseline": "middle",
-          "dy": -3
         },
-        "encoding": {
-          "x": {
-            "field": "Resource Usage",
-            "type": "nominal"
-          },
-          "y": {
-            "field": "Climate Type",
-            "type": "nominal"
-          },
-          "text": {
-            "field": "UsagePercentage",
-            "type": "quantitative",
-            "format": ".1f"
-          },
-          "color": {
-            "condition": {
-              "test": "datum.UsagePercentage > 25",
-              "value": "white"
-            },
-            "value": "black"
+        "y": {
+          "field": "Climate Type",
+          "type": "nominal",
+          "title": "Climate Type",
+          "axis": {
+            "titleFontSize": 15,
+            "labelFontSize": 12,
+            "titlePadding": 10
           }
+        },
+        "color": {
+          "field": "UsagePercentage",
+          "type": "quantitative",
+          "title": "Usage Percentage (%)",
+          "scale": {"scheme": "warmgreys" },
+          "legend": {
+            "title": "Usage Percentage (%)",
+            "titleFontSize": 12,
+            "labelFontSize": 10
+          }
+        },
+        "tooltip": [
+          {"field": "Climate Type", "type": "nominal", "title": "Climate Type"},
+          {"field": "Resource Usage", "type": "nominal", "title": "Resource Usage"},
+          {"field": "UsagePercentage", "type": "quantitative", "title": "Usage Percentage (%)", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "dy": -3
+      },
+      "encoding": {
+        "x": {
+          "field": "Resource Usage",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "Climate Type",
+          "type": "nominal"
+        },
+        "text": {
+          "field": "UsagePercentage",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.UsagePercentage > 25",
+            "value": "white"
+          },
+          "value": "black"
         }
       }
-    ]
-  }
-  
+    }
+  ]
+}

@@ -77,6 +77,7 @@
             "tooltip": [
               {"field": "Location", "type": "nominal", "title": "City"},  
               {"field": "AvgRainfall", "type": "quantitative", "title": "Rainfall (mm)", "format": ".2f"}
+            
             ]
           },
 
