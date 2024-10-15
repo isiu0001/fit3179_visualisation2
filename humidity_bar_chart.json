@@ -5,58 +5,152 @@
   "data": {
     "url": "data/major_city_humidity.csv"
   },
-  "mark": {
-    "type": "bar",
-    "width": 70,
-    "opacity": 0.7
-  },
-  "encoding": {
-    "x": {
-      "field": "Location",
-      "type": "nominal",
-      "axis": {
-        "title": "City",
-        "labelAngle": 0,
-        "titleFontSize": 15,
-        "labelFontSize": 12
+  "layer":[
+    {
+      "mark": {
+        "type": "bar",
+        "width": 70,
+        "opacity": 0.7
+      },
+      "encoding": {
+        "x": {
+          "field": "Location",
+          "type": "nominal",
+          "axis": {
+            "title": "City",
+            "labelAngle": 0,
+            "titleFontSize": 15,
+            "labelFontSize": 12
+          }
+        },
+        "y": {
+          "field": "AvgHumidity",
+          "type": "quantitative",
+          "axis": {
+            "title": "Average Humidity (%)",
+            "titleFontSize": 15,
+            "labelFontSize": 12,
+            "titlePadding": 20
+          },
+          "scale": {
+            "domain": [0, 70]
+          }
+        },
+        "color": {
+          "field": "Location",
+          "type": "nominal",
+          "legend": {
+            "title": "City",
+            "titleFontSize": 12,
+            "labelFontSize": 10
+          },
+          "scale": {
+            "scheme": "tableau10"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Location",
+            "type": "nominal",
+            "title": "City"
+          },
+          {
+            "field": "AvgHumidity",
+            "type": "quantitative",
+            "title": "Average Humidity (%)"
+          }
+        ]
       }
     },
-    "y": {
-      "field": "AvgHumidity",
-      "type": "quantitative",
-      "axis": {
-        "title": "Average Humidity (%)",
-        "titleFontSize": 15,
-        "labelFontSize": 12,
-        "titlePadding": 20
+    {
+     
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100
       },
-      "scale": {
-        "domain": [0, 70]
+      "encoding": {
+        "x": {
+          "value": 5
+        },
+        "y": {
+          "value": 20
+        },
+        "text": {
+          "value": "Whill most city has similar humidity level, Adelaide "
+        },
+        "color": {"value": "#49494a"}
       }
     },
-    "color": {
-      "field": "Location",
-      "type": "nominal",
-      "legend": {
-        "title": "City",
-        "titleFontSize": 12,
-        "labelFontSize": 10
+
+    {
+     
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100
       },
-      "scale": {
-        "scheme": "tableau10"
+      "encoding": {
+        "x": {
+          "value": 5
+        },
+        "y": {
+          "value": 40
+        },
+        "text": {
+          "value": "show relatively low humidity, indicating a potentially"
+        },
+        "color": {"value": "#49494a"}
       }
     },
-    "tooltip": [
-      {
-        "field": "Location",
-        "type": "nominal",
-        "title": "City"
+
+    {
+     
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "font": "Helvetica",
+        "fontWeight": 100
       },
-      {
-        "field": "AvgHumidity",
-        "type": "quantitative",
-        "title": "Average Humidity (%)"
+      "encoding": {
+        "x": {
+          "value": 5
+        },
+        "y": {
+          "value": 60
+        },
+        "text": {
+          "value": "distinct climate type"
+        },
+        "color": {"value": "#49494a"}
       }
-    ]
-  }
+    },
+
+    {
+      "mark": {
+        "type": "point",
+        "shape": "triangle",
+        "size": 80,
+        "angle": 180,
+        "align": "center"
+      },
+      "encoding": {
+        "x": {
+          "value": 55
+        },
+        "y": {
+          "value": 90
+        },
+        "color": {"value": "black"}
+      }
+    }
+  
+
+
+  ]
 }
