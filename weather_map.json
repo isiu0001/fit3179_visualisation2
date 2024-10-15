@@ -61,7 +61,7 @@
               "field": "AvgRainfall",
               "type": "quantitative",
               "scale": {
-                  "scheme": "blues",
+                  "range": ["#cceeff", "#66b3ff", "#3399ff", "#0073e6", "#0059b3", "#003366"],
                   "domain": [0,1,2,3,4,5]
               },
               "title": "Average Daily Rainfall (mm)",

@@ -27,7 +27,10 @@
   ],
   "layer": [
     {
-      "mark": "line",
+      "mark": {
+        "type": "line",
+        "opacity": 0.70
+      },
       "encoding": {
         "x": {
           "field": "Year",
@@ -86,7 +89,10 @@
         },
         "color": {
           "field": "Location",
-          "type": "nominal"
+          "type": "nominal",
+          "scale": {
+            "scheme": "tableau10"
+          }
         },
         "tooltip": [
           {"field": "Year", "type": "ordinal", "title": "Year"},
@@ -104,7 +110,9 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "fontSize": 12
+        "fontSize": 12,
+        "font": "Arial",
+        "fontWeight": "normal"
       },
       "encoding": {
         "x": {
